@@ -10,6 +10,23 @@ from sklearn.preprocessing import LabelEncoder
 warnings.filterwarnings("ignore")
 
 
+def sort_data(df):
+    """
+    This function sorts the data by date_sold and then resets the index of the data
+
+    :param df: DataFrame
+
+    :return: DataFrame
+    """
+    # Sort the data by date_sold
+    df = df.sort_values(by="datesold")
+
+    # Reset the index
+    df.reset_index(drop=True, inplace=True)
+
+    return df
+
+
 def main(df, neural_network=False, tree_ensemble=False):
     """
     This function preprocesses the data for the different models.
