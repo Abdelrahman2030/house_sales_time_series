@@ -49,10 +49,9 @@ def main(df, neural_network=False, tree_ensemble=False):
 
     # Order the index of the data
     df = df.set_index("date_sold").sort_index()
-    x
 
-    # Drop columns
-    df.drop(columns=["date_sold"], inplace=True)
+    # Drop index
+    df.reset_index(drop=True, inplace=True)
 
     # Label encode the bedrooms column
     le = LabelEncoder()
