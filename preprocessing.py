@@ -47,6 +47,9 @@ def main(df, neural_network=False, tree_ensemble=False):
     df["year"] = df["date_sold"].dt.year
     df["month"] = df["date_sold"].dt.month
 
+    # Order the index of the data
+    df = df.set_index("date_sold").sort_index()
+
     # Drop columns
     df.drop(columns=["date_sold"], inplace=True)
 
