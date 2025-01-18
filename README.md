@@ -73,6 +73,14 @@ The dataset contains information about house sales, including features such as:
 
 ---
 
+## Visualizations
+### Actual vs Predicted Prices
+The following graph visualizes the comparison between actual and predicted house prices over time:
+
+![Actual vs Predicted Prices](https://github.com/Abdelrahman2030/house_sales_time_series/blob/main/Graphs/actual_vs_predicted.png)
+
+---
+
 ## Conclusion
 This project demonstrates the use of XGBoost and advanced preprocessing techniques to predict house sales prices. Future improvements could include:
 - Experimenting with additional models, such as LightGBM or neural networks.
@@ -89,4 +97,3 @@ To reproduce this project:
 4. Evaluate the model on the test set using RMSE.
 
 For detailed implementation, refer to the code provided in the repository.
-
